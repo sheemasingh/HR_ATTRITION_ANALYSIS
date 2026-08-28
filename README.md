@@ -15,14 +15,6 @@ Does working overtime increase the likelihood of leaving?
 Does income level affect attrition?
 Are newer employees more likely to leave than tenured ones?
 Does promotion stagnation correlate with attrition?
-🗂️ Repository Structure
-├── employee_attrition_rawdata.csv       # Original, unprocessed dataset
-├── employee_attrition_cleaned.csv       # Cleaned dataset with engineered features
-├── IBM_HR_analytics.ipynb               # Python notebook: cleaning + feature engineering
-├── IBM_hr_analysis.sql                  # SQL queries for aggregate attrition analysis
-├── HR_Attrition_Dashboard.pbix          # Power BI dashboard (interactive report)
-└── README.md                            # Project documentation (this file)
-🧹 Data Cleaning & Feature Engineering
 
 Performed in IBM_HR_analytics.ipynb using pandas and numpy. Steps applied to the raw data:
 
@@ -92,11 +84,16 @@ Stage	Tool
 Data Cleaning & Feature Engineering	Python (pandas, numpy) — Jupyter Notebook
 Aggregate Analysis	SQL
 Dashboard & Visualization	Power BI
+
 ▶️ How to Reproduce
+
 Clone/download this repository.
 Run the notebook: Open IBM_HR_analytics.ipynb, update the input file path to your local copy of the raw dataset, and run all cells. This regenerates employee_attrition_cleaned.csv.
+
 Load into your database: Import employee_attrition_cleaned.csv into a table named hr_analytics.hr_attrition (or update the table name in the SQL file), then run IBM_hr_analysis.sql to reproduce the aggregate analysis.
+
 Open the dashboard: Open HR_Attrition_Dashboard.pbix in Power BI Desktop, and point the data source to your cleaned CSV or database table if paths have changed. Refresh to load the latest data.
+
 📌 Recommendations for HR
 Investigate overtime policies in high-attrition departments (especially Sales) — consider workload redistribution or overtime caps.
 Review compensation bands for Low/Medium income employees, where attrition risk is highest.
